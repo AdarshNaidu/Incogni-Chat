@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148621412-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-148621412-1');
+</script>
+
+    <title>Incogni-PES-Chat</title>
+    <meta name="description" content="Real time chat application">
+    <link id="favicon" rel="icon" href="https://vignette.wikia.nocookie.net/logopedia/images/e/e1/Incognito_logo.png/revision/latest?cb=20160422124241" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.dev.js"></script>
+  </head>
+  <body class = "preload">
+
+    <div id = "landing">
+    
+    <div class="backgroundimages">
+    <img id="blob1" src="https://cdn.glitch.com/15adc2bd-6f36-48e1-a2ee-71570911f8e2%2Fblob1.png?v=1569168629923" alt="blob1">
+    <img id="blob2" src="https://cdn.glitch.com/15adc2bd-6f36-48e1-a2ee-71570911f8e2%2Fblob2.png?v=1569168629489" alt="blob2">
+    <img id="incognito" src="https://cdn.glitch.com/15adc2bd-6f36-48e1-a2ee-71570911f8e2%2FIncognito_logo.png?v=1569168687727" alt="incognito">
+    </div>
+    <div class="background">
+        
+    </div>
+    <h1 class="Logo">Incogni-PES-Chat</h1>
+    <div class="form">
+        <input type="text" placeholder="Enter Desired Username..." id = "handle">
+        <button id = "grpbtn">Group Chat</button>
+        <button id = "pvtbtn">Private Chat</button>
+    </div>
+    </div>
+    
+    
+    
+    
+    <main>
+        <div class="labels">
+            <div>
+                <h1 style="color: White; margin: 0%;  font-family: Arvo ,Arial, Helvetica, sans-serif;">Incogni-PES-Chat</h1>
+            </div>
+            <div>
+                <p>You as</p>
+                <h1 id = "username" style="color: rgba(235, 20, 76, 1); margin:0%;">Adarsh Naidu</h1>
+            </div>
+
+        </div>
+
+        <div id = "chatbox">
+            <div id = "output">  
+                <p>It's Anonymous ♪(┌・。・)┌</p>
+            </div>
+
+            <div class="interact">
+                <input id="message" type="text" placeholder="Press Enter to Send...">
+                <div id="send" title="press Enter instead" onclick="handlers.addChat()">Send</div>
+            </div>
+        </div>
+      
+      <div id = "buttons">
+        <div class="toggle" onclick = "document.location.reload()">
+            Home
+        </div>
+        <div class = "toggle" id = "onlineUsers">
+          Online: 1
+        </div>
+      </div>
+
+
+    </main>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+        $(window).load(function() {
+        $("body").removeClass("preload");
+        });
+    </script>
+    
+    
+    
+    <script src="/client.js"></script>
+  </body>
+</html>
