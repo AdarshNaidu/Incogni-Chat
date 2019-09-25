@@ -1,0 +1,321 @@
+*{
+    box-sizing: border-box;
+}
+html{
+}
+
+body{
+    margin: 0%;
+    padding: 0%;
+    background-color: #505050;
+}
+
+main{
+    margin: 0% 20%;
+    display: none;
+    flex-flow: column;
+    color: white;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.labels{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.labels p{
+    margin: 0%;
+}
+
+#chatbox{
+    min-height: 500px;
+    width: 100%;
+    box-shadow: 2px 2px 15px 1px black;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: flex-end;
+    flex-flow: column;
+}
+
+#output{
+    list-style-type: none;
+    display: flex;
+    flex-flow: column;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    padding: 10px;
+    margin: 0%;
+    border-radius: 20px 20px 0 0;
+}
+#output p{
+    align-self: flex-start;
+    margin: 5px 0;
+    padding: 5px 10px;
+    border-radius: 10px;
+    max-width: 70%;
+    color: white;
+    background-color: rgba(0, 208, 132, 1) ;
+}
+
+#output .left{
+    align-self: flex-start;
+    background-color: rgba(0, 208, 132, 1);
+}
+#output .right{
+    align-self: flex-end;
+    background-color: rgba(235, 20, 76, 1);
+}
+
+.interact{
+    display: flex;
+    margin: 10px 0;
+}
+.interact input{
+    flex: 4 4 0;
+    border-radius: 10px;
+    margin: 0% 10px;
+    padding: 0% 5px;
+    border: 3px solid rgba(6, 147, 227, 1);
+}
+#send{
+    padding: 5px 10px;
+    color: white;
+    background-color: rgba(255, 105, 0, 1);
+    flex: 1 1 0;
+    margin: 0% 10px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#buttons{
+  display:flex;
+  justify-content: space-between;
+}
+
+.toggle{
+    margin: 10px;
+    padding: 5px 20px;
+    background-color: rgba(6, 147, 227, 1);
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    width: 50%;
+}
+
+@media screen and (max-width:1200px){
+    main{
+        margin: 0% 5%;
+    }
+}
+@media screen and (max-width:800px){
+    header{
+        flex-flow: column;
+    }
+}
+@media screen and (max-width:500px){
+    header{
+        flex-flow: column;
+    }
+  .labels{
+    flex-flow:column;
+  }
+    main{
+        margin: 0% 5%;
+    }
+    .chatBox{
+        display: block;
+        overflow: auto;
+    }
+    .interact{
+        flex-flow: column;
+    }
+    .interact input{
+        padding: 5px 10px;
+        margin: 5px 10px;
+    }
+    #output p{
+        max-width: 90%;
+    }
+  .toggle{
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+div.background{
+    margin:0;
+    padding:0;
+    float: right;
+    height: 100vh;
+    background-color:#505050;
+    animation-name: back;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0s;
+    z-index:-1;
+}
+div.backgroundimages{
+    margin:0;
+    padding:0;
+    position: absolute;
+    top:0;
+    left:0;
+    height:100vh;
+    width:100vw;
+    overflow:hidden;
+}
+#blob1{
+    position: absolute;
+    left:700px;
+    top:600px;
+    z-index: 1;
+    animation-name: blob1;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    width:140vw;
+}
+#blob2{
+    position:absolute;
+    top:-1250px;
+    left:800px;
+    transform:rotateZ(70deg);
+    animation-name: blob2;
+    animation-duration:1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+    width:140vw;
+}
+#incognito{
+    position: absolute;
+    visibility:hidden;
+    animation-name: incognito;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.8s;
+    width:105vw;
+}
+.Logo{
+    font-family: Arvo ,Arial, Helvetica, sans-serif;
+    display: inline-block;
+    position: absolute;
+    color:white;
+    margin:3%;
+    margin-left: 5%;
+    font-size:50px;
+}
+.form{
+    position: absolute;
+    top:40vh;
+    left:10%;
+    width:30%;
+    z-index: 999;
+    transition:width 0.5s;
+}
+
+.form button{
+  width: 50%;
+  display: block;
+    margin:10px auto;
+    background-color: #c9c9c9;
+    padding:5px;
+    border:2px solid black;
+    border-radius: 10px;
+    color:black;
+    font-size: 20px;
+    cursor: pointer;
+}
+#landing input[type=text]{
+    width:100%;
+    padding:15px;
+    border:2px solid black;
+    border-radius: 10px;
+    background-color: #c9c9c9;
+    font-size: 20px;
+}
+#landing input[type=button]{
+    display:block;
+    margin:10px auto;
+    background-color: #c9c9c9;
+    padding:5px 20px;
+    border:2px solid black;
+    border-radius: 10px;
+    color:black;
+    font-size: 20px;
+    cursor: pointer;
+}
+#landing input[type=text]:focus{
+    background-color:black;
+    color:white;
+}
+::placeholder{
+    color:black;
+}
+
+
+@media screen and (max-width:800px){
+    .form{
+        display:block;
+        margin:auto;
+        width:80%;
+    }
+}
+@keyframes blob1{
+    0%{
+        left:700px;
+        top:600px;
+    }
+    100%{
+        left: 20vw;
+        top:16vw;
+        /*left:350px;
+        top:250px;*/
+        z-index: 1;
+    }
+}
+@keyframes blob2{
+    0%{
+        top:-60vw;
+        left:60vw;
+    }
+    100%{
+        top:-15vw;
+        left:20vw;
+        transform:rotateZ(70deg);
+    }
+}
+@keyframes incognito{
+    0%{
+        transform:scale(0) rotateZ(0deg);
+        top:-15vw;
+        left:20vw;
+        opacity: 1;
+        visibility:visible;
+    }
+    100%{
+        transform: scale(0.4) rotateZ(-20deg);
+        top:-27vw;
+        left:20vw;
+        opacity: 1;
+        visibility: visible;
+    }
+}
+@keyframes back{
+    0%{
+        width:0vw;
+        
+    }
+    100%{
+        width:100vw;
+    }
+}
